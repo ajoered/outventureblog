@@ -61,7 +61,7 @@ keystone.set('nav', {
 	users: 'users',
 });
 
-keystone.set('baseUrl', (keystone.get('env') == 'production') ? 'https://nodevision.com.au/' : 'http://localhost:3000/');
+keystone.set('baseUrl', (keystone.get('env') == 'production') ? 'https://outventureblog.herokuapp.com/' : 'http://localhost:3000/');
 
 // Start Keystone to connect to your database and initialise the web server
 
@@ -76,5 +76,6 @@ if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
 	+ '\nset up your mailgun integration');
 }
 
+keystone.set('cloudinary config', 'cloudinary://261514854656217:Su9A7B1xaj52VRCgzg3duN88gCY@outventure-blog' );
 
 keystone.start();
